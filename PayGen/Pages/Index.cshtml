@@ -1,0 +1,130 @@
+﻿@page
+@model IndexModel
+@*@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+*@
+@{
+    ViewData["Title"] = "PayGen";
+}
+
+<h1>PayGen</h1>
+
+<h4>Employee Monthly Payslip Generator</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Employee.FirstName" class="control-label"></label>
+                <input asp-for="Employee.FirstName" class="form-control" />
+                <span asp-validation-for="Employee.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employee.LastName" class="control-label"></label>
+                <input asp-for="Employee.LastName" class="form-control" />
+                <span asp-validation-for="Employee.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employee.AnnualSalary" class="control-label"></label>
+                <input asp-for="Employee.AnnualSalary" class="form-control" />
+                <span asp-validation-for="Employee.AnnualSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Employee.SuperRate" class="control-label"></label>
+                <input asp-for="Employee.SuperRate" class="form-control" />
+                <span asp-validation-for="Employee.SuperRate" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Employee.PayPeriod" class="control-label"></label>
+               @* <input asp-for="Employee.PayPeriod" type="month" class="form-control" />*@
+                <select asp-for="Employee.PayPeriod" class="form-control">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <span asp-validation-for="Employee.PayPeriod" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Generate Payslip" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    @if (Model.PaySlip is object) {
+        <div class="col-md-8">
+            <table border="0">
+                <tr height="100px" style="text-align:center;font-size:24px; font-weight:600;">
+                    <td colspan='4'>XYZ Limited</td>
+                </tr>
+                <tr>
+                    <th><label asp-for="PaySlip.Name" class="control-label"></label>:</th>
+                    <td>@Model.PaySlip.Name</td>
+                    <th><label asp-for="PaySlip.PayPeriod" class="control-label"></label>:</th>
+                    <td>@Model.PaySlip.PayPeriod</td>
+                </tr>
+            </table>
+            <table border="0">
+                <tr>
+                    <th >Earnings</th>
+                    <th>Amount</th>
+                    <th >Deductions</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td><label asp-for="PaySlip.GrossIncome" class="control-label"></label>:</td>
+                    <td>@Model.PaySlip.GrossIncome</td>
+                    <td><label asp-for="PaySlip.IncomeTax" class="control-label"></label>:</td>
+                    <td>@Model.PaySlip.IncomeTax</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><label asp-for="PaySlip.Super" class="control-label"></label>:</td>
+                    <td>@Model.PaySlip.Super</td>
+                </tr>
+                <tr>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td><label asp-for="PaySlip.NetIncome" class="control-label"></label>:</td>
+                    <td>@Model.PaySlip.NetIncome</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>        
+    }
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<style>
+table{
+width: 100%;
+border-collapse:collapse;
+border: 1px solid black;
+padding-left:15px;
+}
+table td{line-height:25px;}
+</style>
