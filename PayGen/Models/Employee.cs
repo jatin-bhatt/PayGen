@@ -20,7 +20,7 @@ namespace Application.Models {
         [RegularExpression(@"^[1-9]\d*$", ErrorMessage ="Please enter a number greater than 0")]
         public int AnnualSalary { get; set; }
 
-        [DisplayName("Super Rate")]
+        [DisplayName("Super Rate (%)")]
         [Range(0, 50, ErrorMessage = "Please enter a value between 0 and 50")]
         public decimal SuperRate { get; set; }
 

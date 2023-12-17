@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PayGen.Domain\Payroll.Domain.csproj" />
+    <ProjectReference Include="..\PayGen.Domain\PayGen.Domain.csproj" />
   </ItemGroup>
 
 </Project>
