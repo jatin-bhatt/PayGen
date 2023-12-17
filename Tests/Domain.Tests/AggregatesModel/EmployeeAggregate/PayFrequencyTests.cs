@@ -1,4 +1,4 @@
-﻿using Payroll.Domain.AggregatesModel.EmployeeAggregate;
+﻿using PayGen.Domain.AggregatesModel.EmployeeAggregate;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Payroll.Domain.Tests.AggregatesModel.EmployeeAggregate {
+namespace PayGen.Domain.Tests.AggregatesModel.EmployeeAggregate {
     public class PayFrequencyTests {
         [Fact]
         public void FromName_FrequencyNameMatch_ReturnsPayFrequency() {

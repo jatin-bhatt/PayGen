@@ -1,10 +1,10 @@
 ﻿using Moq;
 using NodaTime;
-using Payroll.Domain.AggregatesModel.EmployeeAggregate;
+using PayGen.Domain.AggregatesModel.EmployeeAggregate;
 using System;
 using Xunit;
 
-namespace Payroll.Domain.Tests.AggregatesModel.EmployeeAggregate {
+namespace PayGen.Domain.Tests.AggregatesModel.EmployeeAggregate {
     public class EmployeeTests {
         TaxSlab[] FakeTaxSlabs;
 

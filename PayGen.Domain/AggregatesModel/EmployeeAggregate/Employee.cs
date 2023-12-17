@@ -1,9 +1,9 @@
 ﻿using NodaTime;
-using Payroll.Domain.AggregatesModel.EmployeeAggregate.DomainEvents;
-using Payroll.Domain.Base;
+using PayGen.Domain.AggregatesModel.EmployeeAggregate.DomainEvents;
+using PayGen.Domain.Base;
 using System.Globalization;
 
-namespace Payroll.Domain.AggregatesModel.EmployeeAggregate {
+namespace PayGen.Domain.AggregatesModel.EmployeeAggregate {
     public class Employee : Entity, IAggregateRoot {
         private const int AMOUNT_DECIMAL_PRECISION = 2;
         private readonly IClock _clock;

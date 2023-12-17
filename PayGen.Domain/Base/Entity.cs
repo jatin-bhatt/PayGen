@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Payroll.Domain.Base;
+namespace PayGen.Domain.Base;
 
 public abstract class Entity
 {

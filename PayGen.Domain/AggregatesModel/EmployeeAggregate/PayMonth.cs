@@ -1,6 +1,6 @@
-﻿using Payroll.Domain.Base;
+﻿using PayGen.Domain.Base;
 
-namespace Payroll.Domain.AggregatesModel.EmployeeAggregate {
+namespace PayGen.Domain.AggregatesModel.EmployeeAggregate {
     public class PayMonth : Enumeration {
         public static PayMonth January = new PayMonth(1, nameof(January).ToLowerInvariant());
         public static PayMonth February = new PayMonth(2, nameof(February).ToLowerInvariant());

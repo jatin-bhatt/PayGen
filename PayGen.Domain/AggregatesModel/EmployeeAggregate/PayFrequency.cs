@@ -1,6 +1,6 @@
-﻿using Payroll.Domain.Base;
+﻿using PayGen.Domain.Base;
 
-namespace Payroll.Domain.AggregatesModel.EmployeeAggregate {
+namespace PayGen.Domain.AggregatesModel.EmployeeAggregate {
     public class PayFrequency : Enumeration {
         public static PayFrequency Monthly = new PayFrequency(1, nameof(Monthly).ToLowerInvariant());
         public static PayFrequency Weekly = new PayFrequency(2, nameof(Weekly).ToLowerInvariant());

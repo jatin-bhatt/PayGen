@@ -1,4 +1,4 @@
-﻿namespace Payroll.Domain.Base;
+﻿namespace PayGen.Domain.Base;
 
 public interface IRepository<T> where T : IAggregateRoot
 {

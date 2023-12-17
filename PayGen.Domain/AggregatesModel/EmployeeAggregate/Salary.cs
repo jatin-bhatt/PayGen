@@ -1,6 +1,6 @@
-﻿using Payroll.Domain.Base;
+﻿using PayGen.Domain.Base;
 
-namespace Payroll.Domain.AggregatesModel.EmployeeAggregate {
+namespace PayGen.Domain.AggregatesModel.EmployeeAggregate {
     public class Salary : ValueObject {
         public int AnnualSalary { get; private set; }
         public decimal SuperRate { get; private set; }

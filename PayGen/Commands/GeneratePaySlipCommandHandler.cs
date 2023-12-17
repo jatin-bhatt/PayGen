@@ -1,8 +1,8 @@
 ﻿using Application.Models;
 using MediatR;
 using NodaTime;
-using Employee = Payroll.Domain.AggregatesModel.EmployeeAggregate.Employee;
-using TaxSlab = Payroll.Domain.AggregatesModel.EmployeeAggregate.TaxSlab;
+using Employee = PayGen.Domain.AggregatesModel.EmployeeAggregate.Employee;
+using TaxSlab = PayGen.Domain.AggregatesModel.EmployeeAggregate.TaxSlab;
 
 namespace Application.Commands {
     public class GeneratePaySlipCommandHandler : IRequestHandler<GeneratePaySlipCommand, PaySlip> {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
-namespace Payroll.Domain.Base;
+namespace PayGen.Domain.Base;
 
 public abstract class Enumeration : IComparable
 {

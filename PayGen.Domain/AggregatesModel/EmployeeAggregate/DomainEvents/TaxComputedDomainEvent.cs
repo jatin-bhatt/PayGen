@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Payroll.Domain.AggregatesModel.EmployeeAggregate.DomainEvents {
+namespace PayGen.Domain.AggregatesModel.EmployeeAggregate.DomainEvents {
     public class TaxComputedDomainEvent : INotification {
     }
 }
