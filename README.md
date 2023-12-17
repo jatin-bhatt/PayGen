@@ -6,7 +6,7 @@ PayGen is a .NET App that generates an Employee's monthly pay slip. This is an a
 ### Architecture
 
 PayGen is built with the idea of Domain Driven Design. We try to separate the complicated business logic into domain models (Aggregate, Entities, Value Object) and publish domain events for integration among other bounded contexts.
-![Domain Driven Design](https://martinfowler.com/bliki/DomainDrivenDesign.html)
+[Domain Driven Design](https://martinfowler.com/bliki/DomainDrivenDesign.html)
 
 ### Project Structure
 - Domain Layer 
@@ -46,7 +46,8 @@ PayGen is built with the idea of Domain Driven Design. We try to separate the co
 ```
 
 ## Usage
-Run using IIS or IISExpress (hit ctrl + F5). It will open the PayGen User Interface.
+- Run using IIS 
+- or IISExpress (hit ctrl + F5). It will open the PayGen User Interface on localhost port 5157 `http://localhost:5157/`
 
 
 ## Assumptions
