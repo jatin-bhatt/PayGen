@@ -30,8 +30,6 @@ namespace PayGen.Domain.Tests.AggregatesModel.EmployeeAggregate {
             Mock<IClock> fakeClock = new Mock<IClock>();
             fakeClock.Setup(c => c.GetCurrentInstant()).Verifiable();
 
-
-
             //Act Assert
             Assert.Throws<ArgumentNullException>(() => 
                 new Employee(

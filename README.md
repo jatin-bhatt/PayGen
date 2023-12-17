@@ -21,6 +21,7 @@ PayGen is built with the idea of Domain Driven Design. We try to separate the co
 ![Project Structure](images/screenshot-structure.png)
 
 ## Installation
+- Clone `https://github.com/jatin-bhatt/PayGen.git`
 - Checkout main branch
 - Open the `PayGen.sln` solution.
 - Build
