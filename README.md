@@ -53,7 +53,8 @@ PayGen is built with the idea of Domain Driven Design. We try to separate the co
 ## Assumptions
 
 - Month selection is considered for the current year. However, the application design supports the selection for the previous and next year's months, in case there is a need.
-- Tax Slabs are considered dynamic (e.g. Income Tax Department releases an order to change the slab for the next financial year) Hence, the values are kept in appsettings.
+- Tax Slabs are considered dynamic (e.g. Income Tax Department releases an order to change the slab for the next financial year) Hence, the values are kept in appsettings.json.
+- Super is a part of the deduction.
 - Authentication/Authorization is ignored.
 - Persistence logic is ignored. Therefore, the Infrastructure layer is empty.
 - Input Validations
